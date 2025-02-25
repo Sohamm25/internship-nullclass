@@ -1,0 +1,3 @@
+Today, I focused on understanding CNN architecture and how its used for image colorisation. I compared how PyTorch and TensorFlow handle CNN layers and found that
+In PyTorch, you need to manually specify input and output channels for each convolutional layer as it was taught in lectrure videos of null class that project which was made in pytorch but the same i am thinking to implement this task in tensorflow.
+Additionally, I reviewed how our model processes grayscale images and predicts colors using convolutional layers. I now have a better idea of how the model learns to colorize images step by step. I have made the architecture code and tomoworow i will complete the task
