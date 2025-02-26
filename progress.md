@@ -16,3 +16,4 @@ also the uploaded image can be of any dimension so in code i wrote img_resized =
 also the model predicts in batches even if it’s just one image so i wrote this- img_array_expanded = np.expand_dims(img_array, axis=0) 
 and then grayscale conversion code and then using our model and then some final visualisation code.
 here is the github link of task 1 project.
+https://github.com/Sohamm25/Internship---NullClass/blob/main/task1.ipynb
