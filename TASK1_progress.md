@@ -8,7 +8,7 @@ so day 3 lets focus on completion of task 1 which i have been planning for past 
 3rd - Builiding arch- where i got input image in first layer and then output image layer also included in architectre 
 as i designed the architecture on day 2 it was not perfect but with trial and error and using right activation functions it works well now 
 4th - next the model training set batch size and epochs and set loss as a metric to calculate how well our model works 
-5th -wrote a simple code to test my model on 5 images only and it worked well 
+5th -wrote a simple code to test my model on 5 images only and it worked well
 6th - last step i have used
 from google.colab import files 
 now i can upload grayscale image and then get its colorised version 
