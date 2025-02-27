@@ -1,4 +1,27 @@
-# Daily Progress Report
+# Task 1 - Basic Image Colorization
+
+### Description:
+Implement a simple model that **colorizes grayscale photos** using **basic deep learning techniques**.
+
+### Guidelines:
+- Build the model with **Python** and a deep learning framework such as **TensorFlow** or **Keras**.
+- Focus on achieving **observable colorization results**.
+- **GUI is not necessary**.
+
+---
+
+## Day 1 - Understanding the Problem Statement
+
+Today, I focused on **checking, analyzing, and understanding** the problem statement for Task 1. The key takeaways included:
+
+- Understanding the importance of **image colorization** in deep learning.
+- Reviewing existing **research papers and previous implementations**.
+- Exploring datasets that could be used for training.
+- Deciding to use **TensorFlow/Keras** for implementation.
+
+This initial research provided a solid foundation for moving forward with the project.
+
+---
 
 ## Day 2 - Understanding CNN for Image Colorization
 
