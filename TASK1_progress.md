@@ -81,6 +81,8 @@ Today, my focus was on completing **Task 1**, which I had been planning for the 
      img_array_expanded = np.expand_dims(img_array, axis=0)
      ```
    - Added final **visualization code** to display results.
+## 💡 Credits
+Markdown formatting and structuring by [ChatGPT](https://openai.com/chatgpt)
 
 ---
 
