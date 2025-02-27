@@ -1,19 +1,69 @@
-Today, I focused on understanding CNN architecture and how its used for image colorisation. I compared how PyTorch and TensorFlow handle CNN layers and found that
-In PyTorch, you need to manually specify input and output channels for each convolutional layer as it was taught in lectrure videos of null class that project which was made in pytorch but the same i am thinking to implement this task in tensorflow.
-Additionally, I reviewed how our model processes grayscale images and predicts colors using convolutional layers. I now have a better idea of how the model learns to colorize images step by step. I have made the architecture code and tomoworow i will complete the task
-day 3 - 
-so day 3 lets focus on completion of task 1 which i have been planning for past 2 days 
-1st - importing libraries 
-2nd-  and then setting up data - using cifar dataset and as usual normise it by dividing by 255, then convert rgb to grayscale 
-3rd - Builiding arch- where i got input image in first layer and then output image layer also included in architectre 
-as i designed the architecture on day 2 it was not perfect but with trial and error and using right activation functions it works well now 
-4th - next the model training set batch size and epochs and set loss as a metric to calculate how well our model works 
-5th -wrote a simple code to test my model on 5 images only and it worked well
-6th - last step i have used
-from google.colab import files 
-now i can upload grayscale image and then get its colorised version 
-also the uploaded image can be of any dimension so in code i wrote img_resized = img.resize((32, 32)) 
-also the model predicts in batches even if it’s just one image so i wrote this- img_array_expanded = np.expand_dims(img_array, axis=0) 
-and then grayscale conversion code and then using our model and then some final visualisation code.
-here is the github link of task 1 project.
-https://github.com/Sohamm25/Internship---NullClass/blob/main/task1.ipynb
+# Daily Progress Report
+
+## Day 2 - Understanding CNN for Image Colorization
+
+Today, I focused on understanding **CNN architecture** and how it's used for **image colorization**. I compared how **PyTorch** and **TensorFlow** handle CNN layers and found that:
+
+- In **PyTorch**, you need to manually specify **input and output channels** for each convolutional layer. This was demonstrated in the lecture videos of **NullClass**, where the project was implemented in PyTorch.
+- I am considering implementing the **same task in TensorFlow** to explore differences.
+
+Additionally, I reviewed how our model processes **grayscale images** and predicts colors using convolutional layers. Now, I have a better idea of how the model learns to colorize images **step by step**. I have designed the **architecture code**, and tomorrow, I will complete the task.
+
+---
+
+## Day 3 - Completing Task 1
+
+Today, my focus was on completing **Task 1**, which I had been planning for the past two days. The workflow included:
+
+### Steps:
+
+1. **Importing Libraries** 📌
+   ```python
+   import numpy as np
+   import tensorflow as tf
+   from tensorflow import keras
+   from tensorflow.keras import layers
+   ```
+
+2. **Setting up Data** 📂
+   - Using the **CIFAR dataset**.
+   - Normalizing it by dividing by **255**.
+   - Converting **RGB to grayscale**.
+
+3. **Building Architecture** 🏗️
+   - The first layer takes the **input image**.
+   - The output layer generates the **colorized version**.
+   - Trial and error were used to find the **right activation functions**.
+
+4. **Model Training** 📊
+   - Set **batch size** and **epochs**.
+   - Used **loss as a metric** to evaluate model performance.
+
+5. **Testing the Model** 🧪
+   - Wrote a simple test script for **5 images only**.
+   - The model worked **successfully**!
+
+6. **Final Deployment & Image Uploading** 📸
+   - Used Google Colab for image uploading:
+     ```python
+     from google.colab import files
+     uploaded = files.upload()
+     ```
+   - Allowed uploading images of **any dimension**, resizing them:
+     ```python
+     img_resized = img.resize((32, 32))
+     ```
+   - Ensured **batch processing**, even for a **single image**:
+     ```python
+     img_array_expanded = np.expand_dims(img_array, axis=0)
+     ```
+   - Added final **visualization code** to display results.
+
+---
+
+## 🔗 GitHub Repository
+Check out the full project **[here](https://github.com/Sohamm25/Internship---NullClass/blob/main/task1.ipynb)**.
+
+---
+
+✨ **Next Steps:** Continue refining the model and exploring improvements! 🚀
