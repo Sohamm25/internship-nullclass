@@ -10,4 +10,9 @@ I watched few youtube videos about those pretrained models to learn about them s
 https://youtu.be/tJHMcDtfdDI?feature=shared 
 https://youtu.be/mgdB7WezqbU?feature=shared
  day5 -
-  
+  On Day 5 as per previous plannings from day 4 i tried to integrate it with task 1 project but on trying and implementations i think its better to create a seperate project which will be combination of both the tasks, 
+also gui was necessary in task 2 thus i have decided to use streamlit as i am very experienced when it comes to streamlit projects , 
+now starting with project i tried using deeplabv3+, 
+ i found out this model was unavailable or some availability issues thus decided to switch to UNET - by referring some yt vids i got idea of how to use that pretrained model, 
+then i have thought of the process to create a streamlit application and decided how its going to look like as planning first will be beneficial then,
+at last i have written some basic code and did some research on how these pretrained models work and tomorow on day 6 i am sure i will be able to complete the task 2
