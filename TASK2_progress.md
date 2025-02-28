@@ -10,3 +10,4 @@ I watched few youtube videos about those pretrained models to learn about them s
 https://youtu.be/tJHMcDtfdDI?feature=shared 
 https://youtu.be/mgdB7WezqbU?feature=shared
  day5 -
+  
