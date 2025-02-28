@@ -9,4 +9,4 @@ So I have started making the project and I have decided to use a pre -trained mo
 I watched few youtube videos about those pretrained models to learn about them so that on day 5 I can start the project-
 https://youtu.be/tJHMcDtfdDI?feature=shared 
 https://youtu.be/mgdB7WezqbU?feature=shared
- 
+ day5 -
