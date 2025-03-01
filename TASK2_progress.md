@@ -17,3 +17,6 @@ now starting with project i tried using deeplabv3+,
 then i have thought of the process to create a streamlit application and decided how its going to look like as planning first will be beneficial then,
 at last i have written some basic code and did some research on how these pretrained models work and tomorow on day 6 i am sure i will be able to complete the task 2
 day 6 -
+Today is day 6 and as I planned on day 5 about completion of the task on day 6 itself was not possible it was too much of our work but I have covered 70% of task 2 project first of all streamlit implementation was done correctly ,even the segmentation mask is getting applied correctly, 
+ and then I researched a lot about how can i implement the part where parts user can select to colourise a specific region. 
+However, I faced some issues while integrating it completely, which caused a delay in completing the task today, so Tomorrow i will work on applying the colorization to the segmented regions and fine-tuning the process for better results. Once that is done, Task 2 will be complete.
