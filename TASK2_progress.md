@@ -16,3 +16,4 @@ now starting with project i tried using deeplabv3+,
  i found out this model was unavailable or some availability issues thus decided to switch to UNET - by referring some yt vids i got idea of how to use that pretrained model, 
 then i have thought of the process to create a streamlit application and decided how its going to look like as planning first will be beneficial then,
 at last i have written some basic code and did some research on how these pretrained models work and tomorow on day 6 i am sure i will be able to complete the task 2
+day 6 -
