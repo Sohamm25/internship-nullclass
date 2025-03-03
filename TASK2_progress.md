@@ -26,5 +26,6 @@ day 8 -
 Today is day 8 as day 7 was an off day,
 So today I have nearly completed my task 2 I started with the application of sementic segmentation mask by doing some practice and implementation on some of the images and doing it many times helped me to understand this concept,
 Next i thought about the regions which are needed to be colourised,
- and I have created variables and by using the logic or layout of sreamlit I can work and give outputs or results based on what input I will get from the user when he is using the web application.
+ and I have created variables and by using the logic or layout of sreamlit I can work and give outputs or results based on what input I will get from the user when he is using the web application,
+also i focused on improvising and model accuracy adn also worked on overall sturcture of streamlit
 Just a few changes and the task 2 will be ready and I will be starting with task 3 tomorrow.
