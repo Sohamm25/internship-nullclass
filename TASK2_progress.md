@@ -22,3 +22,9 @@ Today is day 6 and as I planned on day 5 about completion of the task on day 6 i
 However, I faced some issues while integrating it completely, which caused a delay in completing the task today, so Tomorrow i will work on applying the colorization to the segmented regions and fine-tuning the process for better results. Once that is done, Task 2 will be complete.
 day 7 - 
 off day
+day 8 -
+Today is day 8 as day 7 was an off day,
+So today I have nearly completed my task 2 I started with the application of sementic segmentation mask by doing some practice and implementation on some of the images and doing it many times helped me to understand this concept,
+Next i thought about the regions which are needed to be colourised,
+ and I have created variables and by using the logic or layout of sreamlit I can work and give outputs or results based on what input I will get from the user when he is using the web application.
+Just a few changes and the task 2 will be ready and I will be starting with task 3 tomorrow.
