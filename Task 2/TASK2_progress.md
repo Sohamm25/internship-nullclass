@@ -24,17 +24,6 @@ Today is Day 9, and my focus was on improving and fine-tuning my Task 2 project.
 
 To implement DeepLabV3 effectively, I referred to YT videos and used ChatGPT to understand its structure and the best way to integrate it into my project. After making the necessary changes, I tested the model on multiple images, and the segmentation accuracy was noticeably improved. I have uploaded screenshots in my task 2 folder. Also today i rearranged my github repository of null class and created seperate folders and also task2 progress.md was modifed.
 
-### Project Screenshots
-
-#### Original Image Selection
-![Original Image](C:\Users\soham\Pictures\Screenshots\Screenshot (268).png)
-
-#### Colorized Result
-![Colorized Image](C:\Users\soham\Pictures\Screenshots\Screenshot (267).png)
-
-#### Segmentation Mask
-![Segmentation Mask](C:\Users\soham\Pictures\Screenshots\Screenshot (269).png)
-
 Segmentation Evaluation Metrics:
 - Accuracy: 0.93
 - Precision: 0.40
