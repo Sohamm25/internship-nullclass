@@ -19,10 +19,6 @@ Off day
 ## Day 8
 Today is day 8 as day 7 was an off day, So today I have nearly completed my task 2 I started with the application of sementic segmentation mask by doing some practice and implementation on some of the images and doing it many times helped me to understand this concept, Next i thought about the regions which are needed to be colourised, and I have created variables and by using the logic or layout of sreamlit I can work and give outputs or results based on what input I will get from the user when he is using the web application, also i focused on improvising and model accuracy adn also worked on overall sturcture of streamlit Just a few changes and the task 2 will be ready and I will be starting with task 3 tomorrow.
 
-# Internship Daily Progress Report
-
-[... previous content remains the same ...]
-
 ## Day 9 Report
 Today is Day 9, and my focus was on improving and fine-tuning my Task 2 project. While working on refinements, i discovered that Deeplabv3 is available, so I decided to use this pretrained model instead of U-Net. The results were significantly better, especially when working with portrait images.
 
@@ -31,13 +27,13 @@ To implement DeepLabV3 effectively, I referred to YT videos and used ChatGPT to 
 ### Project Screenshots
 
 #### Original Image Selection
-![Original Image](C:\Users\soham\Pictures\Screenshots\Screenshot (267).png)
+![Original Image](C:\Users\soham\Pictures\Screenshots\Screenshot (268).png)
 
 #### Colorized Result
-![Colorized Image](path/to/image1.jpg)
+![Colorized Image](C:\Users\soham\Pictures\Screenshots\Screenshot (267).png)
 
 #### Segmentation Mask
-![Segmentation Mask](path/to/image3.jpg)
+![Segmentation Mask](C:\Users\soham\Pictures\Screenshots\Screenshot (269).png)
 
 Segmentation Evaluation Metrics:
 - Accuracy: 0.93
@@ -46,5 +42,3 @@ Segmentation Evaluation Metrics:
 
 Apart from switching to DeepLabV3, I also made small improvements to the Streamlit interface for a smoother user experience. The project is now working efficiently, 
 With Task 2 now fully complete, I will begin Task 3 tomorrow. 
-
-[... rest of the content remains the same ...]
