@@ -3,8 +3,8 @@ Since user interaction is key, I decided to use a segmentation-based approach wh
  After some research on methods like DeOldify, ChromaGAN, and Conditional Image Colorization (CIC), I finalized a plan to implement a Streamlit-based GUI. So far, I have set up the interface where users can upload a grayscale image, select specific regions, and assign colors, and I have also implemented a basic masking system to handle these selections. 
 The UI is working fine, but tomorrow, I will focus on fine-tuning the colorization process, improving the blending of applied colors, 
  and testing the model with multiple images to ensure smooth performance. 
-Today is Day 11, 
- - i focused entirely on implementing the conditional image colorisation logic, 
+Today is Day 11,  
+i focused entirely on implementing the conditional image colorisation logic, 
 and as yesterday I had set up the basic streamlit UI and region selection, today i focused on whether colorization process works smoothly. 
 I started by writing the code to apply colors based on user inputs, ensuring that the selected regions (like sky, grass, and objects) get the right color while maintaining a natural look. 
  also i tried doing some experimentations with different ways to color properly so that the transition doesn’t look artificial, basically i was trying to make the model better. 
