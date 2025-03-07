@@ -10,3 +10,5 @@ I started by writing the code to apply colors based on user inputs, ensuring tha
  also i tried doing some experimentations with different ways to color properly so that the transition doesn’t look artificial, basically i was trying to make the model better. 
 i faced some issues for applying colorisation and segmentation mask, but was cleared later and i learnt some mistakes i was doing while using these pretrained models which were creating these masks, at the end i have implemented those into my project nicely
 Now nearly 60 percent of task 3 is done and i am crystal clear what i have to do on day 12 and so i am sure that task 3 to be completed tomorow if i put my whole day in this task.
+today is day 12-
+Off day
