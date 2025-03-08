@@ -18,3 +18,4 @@ so these 2 days i worked on basically everything because at one point it was a m
 Note:- try pasting low resolution images, if images in sizes of MB is uploaded thiscan result in 15minutes to many hours of training and processing time so better to paste a low resolution image or compressed image, 
 other thing is in stream lit paste the values one by one slowly as simultaneous actions or quick filling might not work in streamlit. 
 Github link Task 3 - https://github.com/Sohamm25/internship-nullclass/tree/main/Task%203
+Uploaded some screenshots as well of project
