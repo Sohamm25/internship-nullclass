@@ -12,9 +12,9 @@ i faced some issues for applying colorisation and segmentation mask, but was cle
 Now nearly 60 percent of task 3 is done and i am crystal clear what i have to do on day 12 and so i am sure that task 3 to be completed tomorow if i put my whole day in this task.
 today is day 12-
 Off day
- today is day 13 - 
+today is day 13 - 
 Over the last two days, I worked extensively on Task 3 and successfully completed it, i learned several new concepts related to deep learning, image processing, and interactive UI development using Streamlit. These 2 days have helped me reaching new heights and increased my confidence of making projects. 
 so these 2 days i worked on basically everything because at one point it was a mees with my previous implementation on task 3, so i started over - used streamlit, then built a cnn encoder architecture, streamlit used for upload and then processed images by converting them between RGB and LAB color spaces, applies user-defined color constraints to specific region - for doing this i used matplotlib and now the region selection has become very clear and easily we can select the region we want by pasting the right x, y co-ordinates, also width height can be adjusted, then colour filling is done by mapping the grayscale intensity to the user-selected color, also at last u can see a download colorised image button and also u can see model summary button. After many implementations the project is finally done. 
 Note:- try pasting low resolution images, if images in sizes of MB is uploaded thiscan result in 15minutes to many hours of training and processing time so better to paste a low resolution image or compressed image, 
 other thing is in stream lit paste the values one by one slowly as simultaneous actions or quick filling might not work in streamlit. 
-Github link Task 3 - 
+Github link Task 3 - https://github.com/Sohamm25/internship-nullclass/tree/main/Task%203
