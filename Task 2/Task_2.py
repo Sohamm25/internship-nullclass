@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
 from torchvision import models
-from PIL import Image
+from PIL import Image 
 import numpy as np
 from skimage import color
 from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, mean_squared_error
