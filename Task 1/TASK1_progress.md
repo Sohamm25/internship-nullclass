@@ -2,6 +2,7 @@
 
 ### Description:
 Implement a simple model that **colorizes grayscale photos** using **basic deep learning techniques**.
+uploaded - model weights file, saved model file, requirements.txt, evaluation of metrics is done by loss = 0.0055 average.
 
 ### Guidelines:
 - Build the model with **Python** and a deep learning framework such as **TensorFlow** or **Keras**.
