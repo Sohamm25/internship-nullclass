@@ -1,5 +1,5 @@
 # Internship Daily Progress Report
-
+NOTE - COLORISATION MODEL ARE UPLOADED BUT FOR SEGMENTATION MODEL I HAVE USED DEEPLAB, FOR THAT MODEL WEIGHTS AND MODEL ARCHITECTURE, THEY ARE IN THIS GDRIVE LINK - https://drive.google.com/drive/folders/1DPhVdYwv05QSDidAIa4lFiEBIvWXik-m?usp=sharing 
 ## Day 4
 Today is day 4 and after the completion of first task I moved on to the second task where in short I have to add semantic segmentation in my project. So the first thing was understanding what I have to do in my second task and I found out that first I need to add semanti segmentation model to separate regions in my previous model for colourisation which needs to be reused here. Second thing was either I have to train a model or use of Pre trained semantic segmentation model so I did some research about such models and found out about these three - DeepLabV3+ or Mask R-CNN The third step will be building graphically user interface which will allow user to select the regions to colourise Then the fourth step I think will be to apply the colour on the selected region and the fifth step will be to display the result in the GUI 
 
