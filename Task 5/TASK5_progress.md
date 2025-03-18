@@ -1,4 +1,4 @@
-day 16 - off day
+day 16 - off day 
 day 17 -
 i took a off day on day 16, 
 today is day 17- as i had reached the last task of the five tasks I have given I decided to revisit or go through my previous 4 tasks today and as I had learnt so many things while I was completing these four tasks so that's why I decided to check my code files for the previous tasks and I found out that there were some errors and also some fixes that I needed to do and edited every task file on my github. 
