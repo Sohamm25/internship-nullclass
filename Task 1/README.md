@@ -9,4 +9,16 @@
 4. In the **fifth cell**, you can check the model's performance on the dataset.  
 5. In the **sixth cell**, you can upload images for testing.  
 
-**Note:** The model performs best when the input images belong to the same categories as the CIFAR-10 dataset.
+**Note:** The model performs best when the input images belong to the same categories as the CIFAR-10 dataset.  
+
+### CIFAR-10 Categories:
+- Airplane  
+- Automobile  
+- Bird  
+- Cat  
+- Deer  
+- Dog  
+- Frog  
+- Horse  
+- Ship  
+- Truck  
