@@ -1,5 +1,5 @@
 day 16 - off day 
-day 17 -
+day 17 - 
 i took a off day on day 16, 
 today is day 17- as i had reached the last task of the five tasks I have given I decided to revisit or go through my previous 4 tasks today and as I had learnt so many things while I was completing these four tasks so that's why I decided to check my code files for the previous tasks and I found out that there were some errors and also some fixes that I needed to do and edited every task file on my github. 
 And then today I started with my task 5 and as usual I prepared the plan to complete this task so first I I decided to use my task four file for this and after some implementations i have decided to create a new file and start from scratch for this project . 
