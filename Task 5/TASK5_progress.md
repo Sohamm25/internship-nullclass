@@ -45,3 +45,8 @@ Today again, as per given recommendations for creating a segmentation mask model
 Now as given i was trying to implement the loading of dataset from various datasets al together but that didn't work that well as after training the models multiple times it was just not right, so i went to stack over flow, more websites and papers for using a database in order to get idea , then i tried the coco dataset again i tried augmentation etc , then i tried another technique or a way i noticed on those sources i was referring from so i tried to used mixed datasets from voc cityscapes coco altogether and trained the model few times which raised issues of model accuracy being lower than 0.01,
 Atlast i tried fine-tuning model in all ways possible by changing the parameters on trial error basis and kept on improving the model, i then used light weight architecture and trained the model
 So lets hope i soon tackle the segmentation mask model problem i will get into it tomorrow, and the rest of task are nearly ready
+On march 30 and 31st, i rechecked my 1st 3rd and 4th assignments,
+I run all the codes and provided a read me fike for each task,
+Then i focused on verifying whether i have had completed the right task as given for me, also i found out that task 4 had live preview issues so i had to research and fix it, 
+Then i made report again for these tasks,
+I then decided to complete task 3 in two ways one way original way of having to select a region using x and y, 2nd i went training a model only for images of nature with sky and grass in order to check whether that will be a right solution and after many implementations, i found out the best way was the previous one as it gave user more freedom
