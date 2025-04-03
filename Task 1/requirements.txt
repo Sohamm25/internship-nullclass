@@ -3,5 +3,5 @@ google.colab
 io
 matplotlib.pyplot
 numpy
-tensorflow
+tensorflow 
 tensorflow.keras
