@@ -14,7 +14,7 @@ def load_segmentation_model():
     model = models.segmentation.deeplabv3_resnet101(pretrained=True)
     model.eval()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
+    model.to(device) 
     return model, device
 
 def get_segmentation_mask(image, model, device):
