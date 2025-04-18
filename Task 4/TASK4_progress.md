@@ -5,7 +5,7 @@
 Now, Task 4 nearly looks similar to Task 3 in terms of implementation. After reading the Task 4 description, I identified two major additions or changes that I needed to make to my Task 3 code:
 
 1. **Interactively control the colorization process**
-2. **The model should dynamically change the colorization**
+2. **The model should dynamically change the colorization** 
 
 I reviewed my Task 3 code and decided to edit it. I initially integrated a CNN architecture in Task 3 to explore the possibility of using AI for automated colorization. However, I found that allowing users to manually select regions and apply colors provided more precise and user-friendly results. That’s why I decided to remove the CNN in Task 4 to simplify the tool and focus entirely on enhancing the interactive colorization process. To finalize this decision, I took help from GPT and Claude to get ideas on how to build an effective tool.
 
