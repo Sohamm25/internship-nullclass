@@ -3,7 +3,7 @@
 ## Day 14
 
 Now, Task 4 nearly looks similar to Task 3 in terms of implementation. After reading the Task 4 description, I identified two major additions or changes that I needed to make to my Task 3 code:
- 
+
 1. **Interactively control the colorization process**
 2. **The model should dynamically change the colorization** 
 
