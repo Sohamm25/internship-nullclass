@@ -6,7 +6,7 @@ Now, Task 4 nearly looks similar to Task 3 in terms of implementation. After rea
 
 1. **Interactively control the colorization process**
 2. **The model should dynamically change the colorization** 
-
+ 
 I reviewed my Task 3 code and decided to edit it. I initially integrated a CNN architecture in Task 3 to explore the possibility of using AI for automated colorization. However, I found that allowing users to manually select regions and apply colors provided more precise and user-friendly results. That’s why I decided to remove the CNN in Task 4 to simplify the tool and focus entirely on enhancing the interactive colorization process. To finalize this decision, I took help from GPT and Claude to get ideas on how to build an effective tool.
 
 Today, I mainly worked on interactive control for the colorization. To achieve this, I decided to add a **color intensity slider** on the sidebar to control how dark the color should be. Then, I planned to implement **dynamic colorization**, which includes adding a **live preview** of the image as the user selects regions and applies colors. My entire day was spent researching how to implement this effectively.
