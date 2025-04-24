@@ -1,7 +1,3 @@
-Absolutely, here's your corrected `README.md` with the formatting fixed — no content changed:
-
----
-
 ```markdown
 # Conditional Image Colorization 🖌️🖼️
 
