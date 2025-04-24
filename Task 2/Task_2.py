@@ -2,47 +2,35 @@ import streamlit as st
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
-from torchvision import models
 from PIL import Image 
 import numpy as np
 from skimage import color 
-from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, mean_squared_error
+from tensorflow.keras.models import load_model
+from skimage.transform import resize
 
-# FIRST OF ALL SEMANTIC SEGMENTATION --
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_segmentation_model():
-    model = models.segmentation.deeplabv3_resnet101(pretrained=True)
-    model.eval()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device) 
-    return model, device
+    model = load_model("my_unet_model.h5")
+    return model
 
-def get_segmentation_mask(image, model, device):
-    preprocess = transforms.Compose([
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                             std=[0.229, 0.224, 0.225])
-    ])
-    input_tensor = preprocess(image).unsqueeze(0).to(device)
-    with torch.no_grad():
-        output = model(input_tensor)['out'][0]
-    output_predictions = output.argmax(0).byte().cpu().numpy()
-    mask = (output_predictions != 0).astype(np.uint8)
-    return mask, output_predictions
+def get_segmentation_mask(image, model):
+    image_resized = image.resize((128, 128))  # Match model input
+    image_array = np.array(image_resized) / 255.0
+    input_tensor = np.expand_dims(image_array, axis=0)  # Shape: (1, 128, 128, 3)
+    prediction = model.predict(input_tensor)[0]
 
-#evaluation
-def evaluate_segmentation(true_mask, pred_mask):
-    acc = accuracy_score(true_mask.flatten(), pred_mask.flatten())
-    prec = precision_score(true_mask.flatten(), pred_mask.flatten(), average='macro')
-    rec = recall_score(true_mask.flatten(), pred_mask.flatten(), average='macro')
-    conf_matrix = confusion_matrix(true_mask.flatten(), pred_mask.flatten())
-    return acc, prec, rec, conf_matrix
+    if prediction.shape[-1] > 1:
+        prediction = np.argmax(prediction, axis=-1)
+    else:
+        prediction = (prediction.squeeze() > 0.5).astype(np.uint8)
 
-# NEXT IS COLORISATION
+    mask = Image.fromarray((prediction * 255).astype(np.uint8)).resize(image.size)
+    mask_np = np.array(mask) // 255
+    return mask_np, mask_np
+
 class ColorizationNet(nn.Module):
     def __init__(self):
         super(ColorizationNet, self).__init__()
-        # a simple encoder - decoder architecture.
         self.encoder = nn.Sequential(
             nn.Conv2d(1, 64, kernel_size=3, padding=1),
             nn.ReLU(),
@@ -56,12 +44,13 @@ class ColorizationNet(nn.Module):
             nn.Conv2d(64, 2, kernel_size=3, padding=1),
             nn.Tanh()
         )
+
     def forward(self, x):
         features = self.encoder(x)
         ab_channels = self.decoder(features)
         return ab_channels
 
-@st.cache(allow_output_mutation=True)
+@st.cache_resource
 def load_colorization_model():
     model = ColorizationNet()
     model.eval()
@@ -70,22 +59,32 @@ def load_colorization_model():
     return model, device
 
 def colorize_grayscale_image(image, mask, model, device, region='foreground'):
-    image_np = np.array(image)
+    image_rgb = image.convert("RGB")
+    image_np = np.array(image_rgb)
     lab_image = color.rgb2lab(image_np)
     L_channel = lab_image[:, :, 0]
     L_norm = L_channel / 100.0
     L_tensor = torch.tensor(L_norm, dtype=torch.float32).unsqueeze(0).unsqueeze(0).to(device)
+
     with torch.no_grad():
         ab_output = model(L_tensor)
-    ab_output = ab_output.squeeze(0).cpu().numpy().transpose(1, 2, 0) * 128
+
+    ab_output = ab_output.squeeze(0).cpu().numpy().transpose(1, 2, 0)
+
     if ab_output.shape[:2] != L_channel.shape:
-        ab_output = np.array(Image.fromarray(ab_output.astype(np.float32)).resize(
-            (L_channel.shape[1], L_channel.shape[0])
-        ))
+        ab_output = resize(
+            ab_output,
+            (L_channel.shape[0], L_channel.shape[1]),
+            mode='reflect',
+            anti_aliasing=True,
+            preserve_range=True
+        ) * 128
+
     colorized_lab = np.zeros((L_channel.shape[0], L_channel.shape[1], 3))
     colorized_lab[:, :, 0] = L_channel
     colorized_lab[:, :, 1:] = ab_output
     colorized_rgb = color.lab2rgb(colorized_lab)
+
     mask_bool = mask.astype(bool)
     if region == 'foreground':
         blended = image_np.copy()
@@ -97,48 +96,33 @@ def colorize_grayscale_image(image, mask, model, device, region='foreground'):
         blended = (colorized_rgb * 255).astype(np.uint8)
     return blended, colorized_rgb
 
-def evaluate_colorization(original, generated):
-    original_gray = color.rgb2gray(original)
-    generated_gray = color.rgb2gray(generated)
-    mse = mean_squared_error(original_gray.flatten(), generated_gray.flatten())
-    return mse
-
 def main():
     st.title("Selective Image Colorization with Semantic Segmentation")
     st.write("Upload an image and choose which region to colorise.")
-    uploaded_file = st.file_uploader("Upload an image rec is jpg or png", type=["jpg", "jpeg", "png"])
+    
+    uploaded_file = st.file_uploader("Upload an image (jpg or png)", type=["jpg", "jpeg", "png"])
     region_choice = st.radio("Select region to colorize", ("Foreground", "Background", "Entire Image"))
+    
     if uploaded_file is not None:
         image = Image.open(uploaded_file).convert("RGB")
         st.image(image, caption="Original image", use_column_width=True)
-        segmentation_model, device = load_segmentation_model()
+
+        segmentation_model = load_segmentation_model()
         colorization_model, device = load_colorization_model()
-        
+
         st.write("Generating segmentation mask...")
-        mask, pred_mask = get_segmentation_mask(image, segmentation_model, device)
+        mask, _ = get_segmentation_mask(image, segmentation_model)
         mask_image = Image.fromarray((mask * 255).astype(np.uint8))
         st.image(mask_image, caption="Segmentation Mask (White = Foreground)", use_column_width=True, clamp=True)
-        
-        # dummy true mask
-        true_mask = mask.copy()
-        acc, prec, rec, conf_matrix = evaluate_segmentation(true_mask, pred_mask)
-        st.write(f"Segmentation evaluation - Accuracy: {acc:.2f}, Precision: {prec:.2f}, Recall: {rec:.2f}")
-        st.write("Confusion Matrix:")
-        st.write(conf_matrix)
-        
+
         st.write("Colorizing image...")
         region_key = region_choice.lower().split()[0]
-        result, generated_rgb = colorize_grayscale_image(image, mask, colorization_model, device, region=region_key)
+        result, _ = colorize_grayscale_image(image, mask, colorization_model, device, region=region_key)
         result_image = Image.fromarray(result)
         st.image(result_image, caption="Result: Selected region colorized image", use_column_width=True)
-        
-        # Download buttons
+
         st.download_button("Download Segmentation Mask", mask_image.tobytes(), file_name="segmentation_mask.jpg", mime="image/jpeg")
         st.download_button("Download Colorized Image", result_image.tobytes(), file_name="colorized_image.jpg", mime="image/jpeg")
-        
-        #evaluation
-        mse = evaluate_colorization(np.array(image), generated_rgb)
-        st.write(f"Colorization Evaluation - MSE: {mse:.2f}")
-        
+
 if __name__ == "__main__":
     main()
