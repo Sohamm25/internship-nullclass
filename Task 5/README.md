@@ -2,7 +2,7 @@
 
 A Streamlit app that colorizes grayscale images across multiple domains—sketches, infrared, sepia, cyanotype, satellite and anaglyph 3D—using computer vision algorithms.
 
-**Note:** This project uses deep learning and computer vision techniques, so no separate model training file is included.
+# Note: This project uses deep learning and computer vision techniques, so no separate model training file is included.
 
 ## Features
 
