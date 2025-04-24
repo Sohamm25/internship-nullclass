@@ -19,7 +19,7 @@ The GUI allows users to:
 - Instantly preview and download the colorized result
 
 ---
-
+```
 ## 🚀 How to Run
 
 1. **Clone the repository** or download the files:
